@@ -47,7 +47,6 @@ Just after installing Woocommerce Cart Additional Fee plugin, Go to Woocommerce 
 
 Update inputs according to your requirement and you are good to go.
 
-
 ## Screenshots
 
 ### 1. Settings panel for Woocommerce Cart Additional Fee Plugin.
@@ -58,8 +57,8 @@ Update inputs according to your requirement and you are good to go.
 
 ![Additional Fee displayed in cart using Woocommerce Cart Additional Fee plugin.](https://ps.w.org/woo-cart-additional-fee/assets/screenshot-2.png)
 
-
 ## Changelog
+
 ### 2.0.1
 - Minor changes in codebase only.
 
@@ -70,14 +69,13 @@ Update inputs according to your requirement and you are good to go.
 - Compatibility check for wp 6.3
 
 ### 1.0.2
-
 - Improved Coding Style & Checked for compatibility for wp 6.0
-### 1.0.1
 
+### 1.0.1
 - Added 'Enable Fee For Customer Country' Filter...
 - Improved Coding Style & Added lot's of comments..
-### 1.0.0
 
+### 1.0.0
 - Initial release.
 
 ## Upgrade Notice
