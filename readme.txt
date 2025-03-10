@@ -1,11 +1,13 @@
 === Woocommerce Cart Additional Fee ===
-Contributors: sajjad67
 Tags: Woocommerce, custom fee, additional fee, cart fee, extra fee
-Requires at least: 5.6
+Contributors: sajjad67
+Author: Sajjad Hossain Sagor
 Tested up to: 6.7
+Requires at least: 5.6
 Stable tag: 2.0.1
-License: GPLv2
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires PHP: 8.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Add Additional Fee to your Customer Cart Based on Some Filters.
 
@@ -13,7 +15,7 @@ Add Additional Fee to your Customer Cart Based on Some Filters.
 This plugins helps admin to add an additional fee to the Woocommerce cart. Admin can add additional fee label and fee amount both fixed & percentage fee type are available. Also can filter fee to specific product. Admin can also apply fee based on cart amount like minimum amount or maximum amount or both min max amount. Admin can also enable fee for specific customer/user country.. Filter for User States is coming soon...
 
 = Features: =
-- Add additioncal fee to woocommerce shopping cart.
+- Add additioncal fee to Woocommerce shopping cart.
 - Set label for additional fee.
 - Enable or disable Additional Woocommerce fee functionality
 - You can set minimum / maximum cart amount to apply Additioncal Fee.
@@ -39,7 +41,6 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 Just after installing Woocommerce Cart Additional Fee plugin, Go to Woocommerce > Settings > Woo Cart Additional Fee tab.
 
 Update inputs according to your requirement and you are good to go.
-
 
 == Screenshots ==
 1. Settings panel for Woocommerce Cart Additional Fee Plugin.
