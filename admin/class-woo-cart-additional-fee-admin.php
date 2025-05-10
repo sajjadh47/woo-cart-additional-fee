@@ -114,6 +114,24 @@ class Woo_Cart_Additional_Fee_Admin {
 	}
 
 	/**
+	 * Declares compatibility with WooCommerce's custom order tables feature.
+	 *
+	 * This function is hooked into the `before_woocommerce_init` action and checks
+	 * if the `FeaturesUtil` class exists in the `Automattic\WooCommerce\Utilities`
+	 * namespace. If it does, it declares compatibility with the 'custom_order_tables'
+	 * feature. This is important for ensuring the plugin works correctly with
+	 * WooCommerce versions that support this feature.
+	 *
+	 * @since    2.0.0
+	 * @access   public
+	 */
+	public function declare_compatibility_with_wc_custom_order_tables() {
+		if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+		}
+	}
+
+	/**
 	 * Add a new settings tab to the WooCommerce settings tabs array.
 	 *
 	 * @since     2.0.0

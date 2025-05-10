@@ -147,6 +147,8 @@ class Woo_Cart_Additional_Fee {
 
 		$this->loader->add_action( 'admin_notices', $plugin_admin, 'admin_notices' );
 
+		$this->loader->add_action( 'before_woocommerce_init', $plugin_admin, 'declare_compatibility_with_wc_custom_order_tables' );
+
 		$this->loader->add_filter( 'woocommerce_settings_tabs_array', $plugin_admin, 'woocommerce_settings_tabs_array', 50 );
 		$this->loader->add_action( 'woocommerce_settings_tabs_wcfee_settings', $plugin_admin, 'render_settings_tab_content' );
 		$this->loader->add_action( 'woocommerce_update_options_wcfee_settings', $plugin_admin, 'update_settings_tab_content' );
