@@ -7,19 +7,20 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @package        Woo_Cart_Additional_Fee
- * @author         Sajjad Hossain Sagor <sagorh672@gmail.com>
+ * @package             Woo_Cart_Additional_Fee
+ * @author              Sajjad Hossain Sagor <sagorh672@gmail.com>
  *
- * Plugin Name:    WooCommerce Cart Additional Fee
- * Plugin URI:     https://wordpress.org/plugins/woo-cart-additional-fee/
- * Description:    Add Additional Fee to your Customer Cart Based on cart amount, minimun cart or maximum cart amount filter and apply fee for specific product item.
- * Version:        2.0.2
- * Author:         Sajjad Hossain Sagor
- * Author URI:     https://sajjadhsagor.com/
- * License:        GPL-2.0+
- * License URI:    http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:    woo-cart-additional-fee
- * Domain Path:    /languages
+ * Plugin Name:         WooCommerce Cart Additional Fee
+ * Plugin URI:          https://wordpress.org/plugins/woo-cart-additional-fee/
+ * Description:         Add Additional Fee to your Customer Cart Based on cart amount, minimun cart or maximum cart amount filter and apply fee for specific product item.
+ * Version:             2.0.2
+ * Author:              Sajjad Hossain Sagor
+ * Author URI:          https://sajjadhsagor.com/
+ * License:             GPL-2.0+
+ * License URI:         http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:         woo-cart-additional-fee
+ * Domain Path:         /languages
+ * Requires Plugins:    woocommerce
  */
 
 // If this file is called directly, abort.
