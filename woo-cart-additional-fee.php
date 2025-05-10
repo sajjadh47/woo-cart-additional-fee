@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The plugin bootstrap file
  *
@@ -8,8 +7,8 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @since          2.0.0
  * @package        Woo_Cart_Additional_Fee
+ * @author         Sajjad Hossain Sagor <sagorh672@gmail.com>
  *
  * Plugin Name:    WooCommerce Cart Additional Fee
  * Plugin URI:     https://wordpress.org/plugins/woo-cart-additional-fee/
