@@ -4,7 +4,7 @@
  * is used to load the plugin's admin-specific functionality.
  *
  * @package       Woo_Cart_Additional_Fee
- * @subpackage    Woo_Cart_Additional_Fee/includes
+ * @subpackage    Woo_Cart_Additional_Fee/admin
  * @author        Sajjad Hossain Sagor <sagorh672@gmail.com>
  */
 

@@ -23,7 +23,7 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
@@ -47,13 +47,13 @@ define( 'WOO_CART_ADDITIONAL_FEE_PLUGIN_BASENAME', plugin_basename( __FILE__ ) )
  *
  * @since    2.0.0
  */
-function woo_cart_additional_fee_on_activate() {
+function on_activate_woo_cart_additional_fee() {
 	require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-woo-cart-additional-fee-activator.php';
 
 	Woo_Cart_Additional_Fee_Activator::on_activate();
 }
 
-register_activation_hook( __FILE__, 'woo_cart_additional_fee_on_activate' );
+register_activation_hook( __FILE__, 'on_activate_woo_cart_additional_fee' );
 
 /**
  * The code that runs during plugin deactivation.
@@ -61,13 +61,13 @@ register_activation_hook( __FILE__, 'woo_cart_additional_fee_on_activate' );
  *
  * @since    2.0.0
  */
-function woo_cart_additional_fee_on_deactivate() {
+function on_deactivate_woo_cart_additional_fee() {
 	require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-woo-cart-additional-fee-deactivator.php';
 
 	Woo_Cart_Additional_Fee_Deactivator::on_deactivate();
 }
 
-register_deactivation_hook( __FILE__, 'woo_cart_additional_fee_on_deactivate' );
+register_deactivation_hook( __FILE__, 'on_deactivate_woo_cart_additional_fee' );
 
 /**
  * The core plugin class that is used to define internationalization,
