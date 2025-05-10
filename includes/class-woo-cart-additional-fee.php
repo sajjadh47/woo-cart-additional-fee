@@ -1,46 +1,50 @@
 <?php
+/**
+ * This file contains the definition of the Woo_Cart_Additional_Fee class, which
+ * is used to begin the plugin's functionality.
+ *
+ * @package       Woo_Cart_Additional_Fee
+ * @subpackage    Woo_Cart_Additional_Fee/includes
+ * @author        Sajjad Hossain Sagor <sagorh672@gmail.com>
+ */
 
 /**
  * The core plugin class.
  *
  * This is used to define internationalization, admin-specific hooks, and
- * public-facing site hooks.
+ * public-facing hooks.
  *
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
- * @since      2.0.0
- * @package    Woo_Cart_Additional_Fee
- * @subpackage Woo_Cart_Additional_Fee/includes
- * @author     Sajjad Hossain Sagor <sagorh672@gmail.com>
+ * @since    2.0.0
  */
-class Woo_Cart_Additional_Fee
-{
+class Woo_Cart_Additional_Fee {
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
 	 * the plugin.
 	 *
-	 * @since    2.0.0
-	 * @access   protected
-	 * @var      Woo_Cart_Additional_Fee_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @since     2.0.0
+	 * @access    protected
+	 * @var       Woo_Cart_Additional_Fee_Loader $loader Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
 	/**
 	 * The unique identifier of this plugin.
 	 *
-	 * @since    2.0.0
-	 * @access   protected
-	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
+	 * @since     2.0.0
+	 * @access    protected
+	 * @var       string $plugin_name The string used to uniquely identify this plugin.
 	 */
 	protected $plugin_name;
 
 	/**
 	 * The current version of the plugin.
 	 *
-	 * @since    2.0.0
-	 * @access   protected
-	 * @var      string    $version    The current version of the plugin.
+	 * @since     2.0.0
+	 * @access    protected
+	 * @var       string $version The current version of the plugin.
 	 */
 	protected $version;
 
@@ -51,19 +55,16 @@ class Woo_Cart_Additional_Fee
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    2.0.0
+	 * @since     2.0.0
+	 * @access    public
 	 */
-	public function __construct()
-	{
-		if ( defined( 'WOO_CART_ADDITIONAL_FEE_VERSION' ) )
-		{
+	public function __construct() {
+		if ( defined( 'WOO_CART_ADDITIONAL_FEE_VERSION' ) ) {
 			$this->version = WOO_CART_ADDITIONAL_FEE_VERSION;
-		}
-		else
-		{
+		} else {
 			$this->version = '1.0.0';
 		}
-		
+
 		$this->plugin_name = 'woo-cart-additional-fee';
 
 		$this->load_dependencies();
@@ -88,30 +89,29 @@ class Woo_Cart_Additional_Fee
 	 * @since    2.0.0
 	 * @access   private
 	 */
-	private function load_dependencies()
-	{
+	private function load_dependencies() {
 		/**
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-plugin-loader.php';
+		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-woo-cart-additional-fee-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-plugin-i18n.php';
+		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-woo-cart-additional-fee-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'admin/class-plugin-admin.php';
+		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'admin/class-woo-cart-additional-fee-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'public/class-plugin-public.php';
+		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'public/class-woo-cart-additional-fee-public.php';
 
 		$this->loader = new Woo_Cart_Additional_Fee_Loader();
 	}
@@ -122,11 +122,10 @@ class Woo_Cart_Additional_Fee
 	 * Uses the Woo_Cart_Additional_Fee_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
-	 * @since    2.0.0
-	 * @access   private
+	 * @since     2.0.0
+	 * @access    private
 	 */
-	private function set_locale()
-	{
+	private function set_locale() {
 		$plugin_i18n = new Woo_Cart_Additional_Fee_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
@@ -136,19 +135,18 @@ class Woo_Cart_Additional_Fee
 	 * Register all of the hooks related to the admin area functionality
 	 * of the plugin.
 	 *
-	 * @since    2.0.0
-	 * @access   private
+	 * @since     2.0.0
+	 * @access    private
 	 */
-	private function define_admin_hooks()
-	{
+	private function define_admin_hooks() {
 		$plugin_admin = new Woo_Cart_Additional_Fee_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 		$this->loader->add_action( 'plugin_action_links_' . WOO_CART_ADDITIONAL_FEE_PLUGIN_BASENAME, $plugin_admin, 'add_plugin_action_links' );
-		
+
 		$this->loader->add_action( 'admin_notices', $plugin_admin, 'admin_notices' );
-		
+
 		$this->loader->add_filter( 'woocommerce_settings_tabs_array', $plugin_admin, 'woocommerce_settings_tabs_array', 50 );
 		$this->loader->add_action( 'woocommerce_settings_tabs_wcfee_settings', $plugin_admin, 'render_settings_tab_content' );
 		$this->loader->add_action( 'woocommerce_update_options_wcfee_settings', $plugin_admin, 'update_settings_tab_content' );
@@ -158,23 +156,22 @@ class Woo_Cart_Additional_Fee
 	 * Register all of the hooks related to the public-facing functionality
 	 * of the plugin.
 	 *
-	 * @since    2.0.0
-	 * @access   private
+	 * @since     2.0.0
+	 * @access    private
 	 */
-	private function define_public_hooks()
-	{
+	private function define_public_hooks() {
 		$plugin_public = new Woo_Cart_Additional_Fee_Public( $this->get_plugin_name(), $this->get_version() );
-		
+
 		$this->loader->add_action( 'woocommerce_cart_calculate_fees', $plugin_public, 'apply_fee' );
 	}
 
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
 	 *
-	 * @since    2.0.0
+	 * @since     2.0.0
+	 * @access    public
 	 */
-	public function run()
-	{
+	public function run() {
 		$this->loader->run();
 	}
 
@@ -183,10 +180,10 @@ class Woo_Cart_Additional_Fee
 	 * WordPress and to define internationalization functionality.
 	 *
 	 * @since     2.0.0
-	 * @return    string    The name of the plugin.
+	 * @access    public
+	 * @return    string The name of the plugin.
 	 */
-	public function get_plugin_name()
-	{
+	public function get_plugin_name() {
 		return $this->plugin_name;
 	}
 
@@ -194,10 +191,10 @@ class Woo_Cart_Additional_Fee
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     2.0.0
-	 * @return    Woo_Cart_Additional_Fee_Loader    Orchestrates the hooks of the plugin.
+	 * @access    public
+	 * @return    Wp_Create_Multi_Posts_Pages_Loader Orchestrates the hooks of the plugin.
 	 */
-	public function get_loader()
-	{
+	public function get_loader() {
 		return $this->loader;
 	}
 
@@ -205,10 +202,10 @@ class Woo_Cart_Additional_Fee
 	 * Retrieve the version number of the plugin.
 	 *
 	 * @since     2.0.0
-	 * @return    string    The version number of the plugin.
+	 * @access    public
+	 * @return    string The version number of the plugin.
 	 */
-	public function get_version()
-	{
+	public function get_version() {
 		return $this->version;
 	}
 }
