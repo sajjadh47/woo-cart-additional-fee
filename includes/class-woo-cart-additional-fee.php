@@ -79,8 +79,8 @@ class Woo_Cart_Additional_Fee {
 	 * Include the following files that make up the plugin:
 	 *
 	 * - Woo_Cart_Additional_Fee_Loader. Orchestrates the hooks of the plugin.
-	 * - Woo_Cart_Additional_Fee_i18n. Defines internationalization functionality.
-	 * - Woo_Cart_Additional_Fee_Admin. Defines all hooks for the admin area.
+	 * - Woo_Cart_Additional_Fee_i18n.   Defines internationalization functionality.
+	 * - Woo_Cart_Additional_Fee_Admin.  Defines all hooks for the admin area.
 	 * - Woo_Cart_Additional_Fee_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
