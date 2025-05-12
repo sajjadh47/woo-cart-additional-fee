@@ -54,7 +54,14 @@ class Woo_Cart_Additional_Fee_Public {
 	 * @access    public
 	 */
 	public function apply_fee() {
+		/**
+		 * Get global woocommerce object.
+		 */
 		global $woocommerce;
+
+		if ( is_admin() ) {
+			return;
+		}
 
 		// check if additional fee checkbox is enabled.
 		$enabled = get_option( 'wcfee_enable', 'no' );
@@ -73,8 +80,15 @@ class Woo_Cart_Additional_Fee_Public {
 			// check if maximum cart ammount is enabled.
 			$wcfee_enable_maximum = get_option( 'wcfee_enable_maximum', 'no' );
 
+			// get applicable for field.
+			$fee_applicable_for = get_option( 'wcfee_fee_applicable_for', 'subtotal' );
+
 			// get cart total ammount.
 			$cart_total = floatval( $woocommerce->cart->cart_contents_total );
+
+			if ( 'subtotal_shipping' === $fee_applicable_for ) {
+				$cart_total += floatval( $woocommerce->cart->shipping_total );
+			}
 
 			// check if fee is for only specific products.
 			$wcfee_enable_product_filter = get_option( 'wcfee_enable_product_filter', 'no' );

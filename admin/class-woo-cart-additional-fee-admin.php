@@ -254,42 +254,79 @@ class Woo_Cart_Additional_Fee_Admin {
 				'id'          => 'wcfee_product_filter',
 				'options'     => $this->get_woo_products(),
 			),
+			'fee_applicable_for'          => array(
+				'name'        => __( 'Fee Applied To', 'woo-cart-additional-fee' ),
+				'type'        => 'select',
+				'placeholder' => __( 'Where to apply Additional Fee', 'woo-cart-additional-fee' ),
+				'id'          => 'wcfee_fee_applicable_for',
+				'options'     => array(
+					'subtotal'          => __( 'Cart Subtotal', 'woo-cart-additional-fee' ),
+					'subtotal_shipping' => __( 'Cart Subtotal + Shipping', 'woo-cart-additional-fee' ),
+				),
+			),
 			'section_end'                 => array(
 				'type' => 'sectionend',
 				'id'   => 'wcfee_tab_section_end',
 			),
 		);
 
-		return apply_filters( 'wc_settings_wcfee_settings', $settings );
+		/**
+		 * Filters the plugin settings array.
+		 *
+		 * This filter allows you to modify the settings array.
+		 * You can use this filter to add, remove, or change the order of settings fields.
+		 *
+		 * @since    2.0.0
+		 * @param    array $settings Array of settings fields.
+		 * @return   array $settings Modified array of settings fields.
+		 */
+		return apply_filters( 'wcfee_settings', $settings );
 	}
 
 	/**
-	 * Get All Woocommerce Products as Array
+	 * Get all WooCommerce products as array [product_id => product_title].
+	 *
+	 * This function retrieves all WooCommerce products, caches the result using a transient,
+	 * and applies a filter to the returned products array.
 	 *
 	 * @since     2.0.0
 	 * @access    public
-	 * @return    array Array of products
+	 * @return    array List of product IDs and titles.
 	 */
 	public function get_woo_products() {
-		$args = array(
-			'post_type'      => 'product',
-			'posts_per_page' => -1,
-		);
+		$transient_key = 'wcfee_woo_products';
+		$products      = get_transient( $transient_key );
 
-		$products = array();
-		$loop     = new WP_Query( $args );
+		if ( false === $products ) {
+			$args = array(
+				'post_type'      => 'product',
+				'posts_per_page' => -1,
+			);
 
-		while ( $loop->have_posts() ) :
+			$products = array();
+			$loop     = new WP_Query( $args );
 
-			$loop->the_post();
+			while ( $loop->have_posts() ) :
 
-			$products[ get_the_ID() ] = get_the_title();
+				$loop->the_post();
 
-		endwhile;
+				$products[ get_the_ID() ] = get_the_title();
 
-		wp_reset_postdata();
+			endwhile;
 
-		return $products;
+			wp_reset_postdata();
+
+			// Cache the products for 1 hour.
+			set_transient( $transient_key, $products, HOUR_IN_SECONDS );
+		}
+
+		/**
+		 * Filter the WooCommerce products retrieved.
+		 *
+		 * @since    2.0.0
+		 * @param    array $products Array of product IDs and titles.
+		 */
+		return apply_filters( 'wcfee_wc_products', $products );
 	}
 
 	/**

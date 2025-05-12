@@ -4,7 +4,7 @@ Contributors: sajjad67
 Author: Sajjad Hossain Sagor
 Tested up to: 6.8
 Requires at least: 5.6
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Add Additional Fee to your Customer Cart Based on Some Filters.
 
 == Description ==
-This plugins helps admin to add an additional fee to the WooCommerce cart. Admin can add additional fee label and fee amount both fixed & percentage fee type are available. Also can filter fee to specific product. Admin can also apply fee based on cart amount like minimum amount or maximum amount or both min max amount. Admin can also enable fee for specific customer/user country.. Filter for User States is coming soon...
+This plugins helps admin to add an additional fee to the WooCommerce cart. Admin can add additional fee label and fee amount both fixed & percentage fee type are available. Also can filter fee to specific product. Admin can also apply fee based on cart amount like minimum amount or maximum amount or both min max amount. Admin can also enable fee for specific customer country.
 
 = Features: =
 - Add Additional Fees: Easily apply extra fees to the WooCommerce shopping cart.
@@ -21,9 +21,6 @@ This plugins helps admin to add an additional fee to the WooCommerce cart. Admin
 - Cart Amount Range: Define minimum and maximum cart totals to apply the fee.
 - Product-Based Fees: Restrict fees to specific products only.
 - Country-Based Fees: Apply fees based on the customer’s billing or shipping country.
-
-**Interested in contributing to WooCommerce Cart Additional Fee?**
-Contact me... sagorh672(at)gmail.com
 
 == Installation ==
 To add a WordPress Plugin using the built-in plugin installer:
@@ -47,6 +44,8 @@ Update inputs according to your requirement and you are good to go.
 2. Additional Fee displayed in cart using WooCommerce Cart Additional Fee plugin.
 
 == Changelog ==
+= 2.0.3 =
+- Added applicable for field to filter where to apply the fee, ex: subtotal or subtotal + shipping
 = 2.0.2 =
 - Checked for latest wp version 6.8
 = 2.0.1 =

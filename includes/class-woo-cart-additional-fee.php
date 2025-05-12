@@ -59,12 +59,7 @@ class Woo_Cart_Additional_Fee {
 	 * @access    public
 	 */
 	public function __construct() {
-		if ( defined( 'WOO_CART_ADDITIONAL_FEE_VERSION' ) ) {
-			$this->version = WOO_CART_ADDITIONAL_FEE_VERSION;
-		} else {
-			$this->version = '1.0.0';
-		}
-
+		$this->version     = defined( 'WOO_CART_ADDITIONAL_FEE_VERSION' ) ? WOO_CART_ADDITIONAL_FEE_VERSION : '1.0.0';
 		$this->plugin_name = 'woo-cart-additional-fee';
 
 		$this->load_dependencies();
