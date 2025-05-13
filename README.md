@@ -2,7 +2,6 @@
 
 **Tags:** WooCommerce, custom fee, additional fee, cart fee, extra fee, WooCommerce fee, advanced fee \
 **Tested up to:** 6.8 \
-**Stable tag:** 2.0.1 \
 **Requires PHP:** 8.0
 
 Add Additional Fee to your Customer Cart Based on Some Filters.
