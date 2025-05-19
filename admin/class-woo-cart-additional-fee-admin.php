@@ -276,9 +276,9 @@ class Woo_Cart_Additional_Fee_Admin {
 		 * This filter allows you to modify the settings array.
 		 * You can use this filter to add, remove, or change the order of settings fields.
 		 *
-		 * @since    2.0.0
-		 * @param    array $settings Array of settings fields.
-		 * @return   array $settings Modified array of settings fields.
+		 * @since     2.0.0
+		 * @param     array $settings Array of settings fields.
+		 * @return    array $settings Modified array of settings fields.
 		 */
 		return apply_filters( 'wcfee_settings', $settings );
 	}
@@ -323,8 +323,9 @@ class Woo_Cart_Additional_Fee_Admin {
 		/**
 		 * Filter the WooCommerce products retrieved.
 		 *
-		 * @since    2.0.0
-		 * @param    array $products Array of product IDs and titles.
+		 * @since     2.0.0
+		 * @param     array $products Array of product IDs and titles.
+		 * @return    array $products Modified array of product IDs and titles.
 		 */
 		return apply_filters( 'wcfee_wc_products', $products );
 	}
