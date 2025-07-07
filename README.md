@@ -21,9 +21,6 @@ This plugins helps admin to add an additional fee to the WooCommerce cart. Admin
 - Product-Based Fees: Restrict fees to specific products only.
 - Country-Based Fees: Apply fees based on the customer’s billing or shipping country.
 
-**Interested in contributing to WooCommerce Cart Additional Fee?**
-Contact me... sagorh672(at)gmail.com
-
 ## Installation
 
 To add a WordPress Plugin using the built-in plugin installer:
