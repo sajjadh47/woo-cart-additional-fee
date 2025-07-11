@@ -11,8 +11,7 @@
 /**
  * The core plugin class.
  *
- * This is used to define internationalization, admin-specific hooks, and
- * public-facing hooks.
+ * This is used to define admin-specific hooks and public-facing hooks.
  *
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
@@ -52,7 +51,7 @@ class Woo_Cart_Additional_Fee {
 	 * Define the core functionality of the plugin.
 	 *
 	 * Set the plugin name and the plugin version that can be used throughout the plugin.
-	 * Load the dependencies, define the locale, and set the hooks for the admin area and
+	 * Load the dependencies, set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
 	 * @since     2.0.0
@@ -63,7 +62,6 @@ class Woo_Cart_Additional_Fee {
 		$this->plugin_name = 'woo-cart-additional-fee';
 
 		$this->load_dependencies();
-		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 	}
@@ -74,7 +72,6 @@ class Woo_Cart_Additional_Fee {
 	 * Include the following files that make up the plugin:
 	 *
 	 * - Woo_Cart_Additional_Fee_Loader. Orchestrates the hooks of the plugin.
-	 * - Woo_Cart_Additional_Fee_i18n.   Defines internationalization functionality.
 	 * - Woo_Cart_Additional_Fee_Admin.  Defines all hooks for the admin area.
 	 * - Woo_Cart_Additional_Fee_Public. Defines all hooks for the public side of the site.
 	 *
@@ -92,12 +89,6 @@ class Woo_Cart_Additional_Fee {
 		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-woo-cart-additional-fee-loader.php';
 
 		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
-		 */
-		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-woo-cart-additional-fee-i18n.php';
-
-		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'admin/class-woo-cart-additional-fee-admin.php';
@@ -109,21 +100,6 @@ class Woo_Cart_Additional_Fee {
 		require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'public/class-woo-cart-additional-fee-public.php';
 
 		$this->loader = new Woo_Cart_Additional_Fee_Loader();
-	}
-
-	/**
-	 * Define the locale for this plugin for internationalization.
-	 *
-	 * Uses the Woo_Cart_Additional_Fee_i18n class in order to set the domain and to register the hook
-	 * with WordPress.
-	 *
-	 * @since     2.0.0
-	 * @access    private
-	 */
-	private function set_locale() {
-		$plugin_i18n = new Woo_Cart_Additional_Fee_i18n();
-
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 	}
 
 	/**
@@ -173,8 +149,7 @@ class Woo_Cart_Additional_Fee {
 	}
 
 	/**
-	 * The name of the plugin used to uniquely identify it within the context of
-	 * WordPress and to define internationalization functionality.
+	 * The name of the plugin used to uniquely identify it within the context of WordPress.
 	 *
 	 * @since     2.0.0
 	 * @access    public
