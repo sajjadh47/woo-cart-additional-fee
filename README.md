@@ -1,4 +1,4 @@
-# WooCommerce Cart Additional Fee
+# Cart Additional Fee for WooCommerce
 
 [![Plugin Banner](https://ps.w.org/woo-cart-additional-fee/assets/banner-772x250.png)](https://wordpress.org/plugins/woo-cart-additional-fee/)
 
@@ -27,8 +27,8 @@ To add a WordPress Plugin using the built-in plugin installer:
 
 Go to Plugins > Add New.
 
-1. Type in the name "WooCommerce Cart Additional Fee" in Search Plugins box
-2. Find the "WooCommerce Cart Additional Fee" Plugin to install.
+1. Type in the name "Cart Additional Fee for WooCommerce" in Search Plugins box
+2. Find the "Cart Additional Fee for WooCommerce" Plugin to install.
 3. Click Install Now to begin the plugin installation.
 4. The resulting installation screen will list the installation as successful or note any problems during the install.
 If successful, click Activate Plugin to activate it, or Return to Plugin Installer for further actions.
@@ -37,21 +37,27 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 
 ### How to use this plugin?
 
-Just after installing WooCommerce Cart Additional Fee plugin, Go to WooCommerce > Settings > Woo Cart Additional Fee tab.
+Just after installing Cart Additional Fee for WooCommerce plugin, Go to WooCommerce > Settings > Woo Cart Additional Fee tab.
 
 Update inputs according to your requirement and you are good to go.
 
 ## Screenshots
 
-### 1. Settings panel for WooCommerce Cart Additional Fee Plugin.
+### 1. Settings panel for Cart Additional Fee for WooCommerce Plugin.
 
-![Settings panel for WooCommerce Cart Additional Fee Plugin.](https://ps.w.org/woo-cart-additional-fee/assets/screenshot-1.png)
+![Settings panel for Cart Additional Fee for WooCommerce Plugin.](https://ps.w.org/woo-cart-additional-fee/assets/screenshot-1.png)
 
-### 2. Additional Fee displayed in cart using WooCommerce Cart Additional Fee plugin.
+### 2. Additional Fee displayed in cart using Cart Additional Fee for WooCommerce plugin.
 
-![Additional Fee displayed in cart using WooCommerce Cart Additional Fee plugin.](https://ps.w.org/woo-cart-additional-fee/assets/screenshot-2.png)
+![Additional Fee displayed in cart using Cart Additional Fee for WooCommerce plugin.](https://ps.w.org/woo-cart-additional-fee/assets/screenshot-2.png)
 
 ## Changelog
+
+### 2.0.4
+- Changed plugin name for complying with the trademark
+
+### 2.0.3
+- Added applicable for field to filter where to apply the fee, ex: subtotal or subtotal + shipping
 
 ### 2.0.2
 - Checked for latest wp version 6.8.

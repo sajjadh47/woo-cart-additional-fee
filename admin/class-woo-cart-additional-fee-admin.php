@@ -101,7 +101,7 @@ class Woo_Cart_Additional_Fee_Admin {
 		if ( ! class_exists( 'WooCommerce', false ) ) {
 			sprintf(
 				'<div class="notice notice-warning is-dismissible"><p>%s <a href="%s">%s</a> %s</p></div>',
-				__( 'WooCommerce Cart Additional Fee requires', 'woo-cart-additional-fee' ),
+				__( 'Cart Additional Fee for WooCommerce requires', 'woo-cart-additional-fee' ),
 				esc_url( 'https://wordpress.org/plugins/woocommerce/' ),
 				__( 'WooCommerce', 'woo-cart-additional-fee' ),
 				__( 'plugin to be active!', 'woo-cart-additional-fee' ),
@@ -135,8 +135,8 @@ class Woo_Cart_Additional_Fee_Admin {
 	 *
 	 * @since     2.0.0
 	 * @access    public
-	 * @param     array $settings_tabs Array of WooCommerce setting tabs & their labels, excluding the Woocommerce Cart Additional Fee tab.
-	 * @return    array $settings_tabs Array of WooCommerce setting tabs & their labels, including the Woocommerce Cart Additional Fee tab.
+	 * @param     array $settings_tabs Array of WooCommerce setting tabs & labels, excluding the Cart Additional Fee for WooCommerce tab.
+	 * @return    array $settings_tabs Array of WooCommerce setting tabs & labels, including the Cart Additional Fee for WooCommerce tab.
 	 */
 	public function woocommerce_settings_tabs_array( $settings_tabs ) {
 		$settings_tabs['wcfee_settings'] = __( 'Cart Additional Fee', 'woo-cart-additional-fee' );
