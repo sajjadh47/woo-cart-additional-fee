@@ -1,10 +1,10 @@
-=== Cart Additional Fee for WooCommerce ===
+=== Cart Additional Fee For WooCommerce ===
 Tags: WooCommerce, custom fee, additional fee, cart fee, extra fee
 Contributors: sajjad67
 Author: Sajjad Hossain Sagor
 Tested up to: 6.8
 Requires at least: 5.6
-Stable tag: 2.0.3
+Stable tag: 2.0.5
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -27,23 +27,25 @@ To add a WordPress Plugin using the built-in plugin installer:
 
 Go to Plugins > Add New.
 
-1. Type in the name "Cart Additional Fee for WooCommerce" in Search Plugins box
-2. Find the "Cart Additional Fee for WooCommerce" Plugin to install.
+1. Type in the name "Cart Additional Fee For WooCommerce" in Search Plugins box
+2. Find the "Cart Additional Fee For WooCommerce" Plugin to install.
 3. Click Install Now to begin the plugin installation.
 4. The resulting installation screen will list the installation as successful or note any problems during the install.
 If successful, click Activate Plugin to activate it, or Return to Plugin Installer for further actions.
 
 == Frequently Asked Questions ==
 = How to use this plugin? =
-Just after installing Cart Additional Fee for WooCommerce plugin, Go to WooCommerce > Settings > Cart Additional Fee tab.
+Just after installing Cart Additional Fee For WooCommerce plugin, Go to WooCommerce > Settings > Cart Additional Fee tab.
 
 Update inputs according to your requirement and you are good to go.
 
 == Screenshots ==
-1. Settings panel for Cart Additional Fee for WooCommerce Plugin.
-2. Additional Fee displayed in cart using Cart Additional Fee for WooCommerce plugin.
+1. Settings panel for Cart Additional Fee For WooCommerce Plugin.
+2. Additional Fee displayed in cart using Cart Additional Fee For WooCommerce plugin.
 
 == Changelog ==
+= 2.0.5 =
+- Changed plugin name for complying with the trademark
 = 2.0.4 =
 - Changed plugin name for complying with the trademark
 = 2.0.3 =

@@ -13,8 +13,8 @@
  * Plugin Name:       Cart Additional Fee For WooCommerce
  * Plugin URI:        https://wordpress.org/plugins/woo-cart-additional-fee/
  * Description:       Add Additional Fee to your Customer Cart Based on cart amount, minimun cart or maximum cart amount filter and apply fee for specific product item.
- * Version:           2.0.3
- * Requires at least: 6.5
+ * Version:           2.0.5
+ * Requires at least: 5.6
  * Requires PHP:      8.0
  * Author:            Sajjad Hossain Sagor
  * Author URI:        https://sajjadhsagor.com/
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'WOO_CART_ADDITIONAL_FEE_VERSION', '2.0.3' );
+define( 'WOO_CART_ADDITIONAL_FEE_VERSION', '2.0.5' );
 
 /**
  * Define Plugin Folders Path
@@ -50,13 +50,13 @@ define( 'WOO_CART_ADDITIONAL_FEE_PLUGIN_BASENAME', plugin_basename( __FILE__ ) )
  *
  * @since    2.0.0
  */
-function on_activate_woo_cart_additional_fee() {
+function cafeewoo_on_activate_woo_cart_additional_fee() {
 	require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-woo-cart-additional-fee-activator.php';
 
 	Woo_Cart_Additional_Fee_Activator::on_activate();
 }
 
-register_activation_hook( __FILE__, 'on_activate_woo_cart_additional_fee' );
+register_activation_hook( __FILE__, 'cafeewoo_on_activate_woo_cart_additional_fee' );
 
 /**
  * The code that runs during plugin deactivation.
@@ -64,13 +64,13 @@ register_activation_hook( __FILE__, 'on_activate_woo_cart_additional_fee' );
  *
  * @since    2.0.0
  */
-function on_deactivate_woo_cart_additional_fee() {
+function cafeewoo_on_deactivate_woo_cart_additional_fee() {
 	require_once WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-woo-cart-additional-fee-deactivator.php';
 
 	Woo_Cart_Additional_Fee_Deactivator::on_deactivate();
 }
 
-register_deactivation_hook( __FILE__, 'on_deactivate_woo_cart_additional_fee' );
+register_deactivation_hook( __FILE__, 'cafeewoo_on_deactivate_woo_cart_additional_fee' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -89,10 +89,10 @@ require WOO_CART_ADDITIONAL_FEE_PLUGIN_PATH . 'includes/class-woo-cart-additiona
  *
  * @since    2.0.0
  */
-function run_woo_cart_additional_fee() {
+function cafeewoo_run_woo_cart_additional_fee() {
 	$plugin = new Woo_Cart_Additional_Fee();
 
 	$plugin->run();
 }
 
-run_woo_cart_additional_fee();
+cafeewoo_run_woo_cart_additional_fee();

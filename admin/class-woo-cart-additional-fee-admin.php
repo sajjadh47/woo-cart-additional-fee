@@ -64,11 +64,11 @@ class Woo_Cart_Additional_Fee_Admin {
 				$this->plugin_name,
 				'WooCartAdditionalFee',
 				array(
-					'wcfeeProductFilterTxtI18n' => __( 'Please select a product...', 'wp-edit-username' ),
-					'wcfeeCountryFilterTxtI18n' => __( 'Please select a country...', 'wp-edit-username' ),
-					'wcfeeTypeTxtI18n'          => __( 'Please select fee apply type...', 'wp-edit-username' ),
-					'wcfeeSelectAllTxtI18n'     => __( 'Select all', 'wp-edit-username' ),
-					'wcfeeSelectNoneTxtI18n'    => __( 'Select none', 'wp-edit-username' ),
+					'wcfeeProductFilterTxtI18n' => __( 'Please select a product...', 'woo-cart-additional-fee' ),
+					'wcfeeCountryFilterTxtI18n' => __( 'Please select a country...', 'woo-cart-additional-fee' ),
+					'wcfeeTypeTxtI18n'          => __( 'Please select fee apply type...', 'woo-cart-additional-fee' ),
+					'wcfeeSelectAllTxtI18n'     => __( 'Select all', 'woo-cart-additional-fee' ),
+					'wcfeeSelectNoneTxtI18n'    => __( 'Select none', 'woo-cart-additional-fee' ),
 				)
 			);
 		}
@@ -83,7 +83,7 @@ class Woo_Cart_Additional_Fee_Admin {
 	 * @return    array $links The updated array of plugin action links, including the settings link.
 	 */
 	public function add_plugin_action_links( $links ) {
-		$links[] = sprintf( '<a href="%s">%s</a>', admin_url( 'admin.php?page=wc-settings&tab=wcfee_settings' ), __( 'Settings', 'wp-edit-username' ) );
+		$links[] = sprintf( '<a href="%s">%s</a>', admin_url( 'admin.php?page=wc-settings&tab=wcfee_settings' ), __( 'Settings', 'woo-cart-additional-fee' ) );
 
 		return $links;
 	}
