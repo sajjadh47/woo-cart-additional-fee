@@ -101,7 +101,7 @@ class Woo_Cart_Additional_Fee_Admin {
 		if ( ! class_exists( 'WooCommerce', false ) ) {
 			sprintf(
 				'<div class="notice notice-warning is-dismissible"><p>%s <a href="%s">%s</a> %s</p></div>',
-				__( 'Cart Additional Fee for WooCommerce requires', 'woo-cart-additional-fee' ),
+				__( 'Cart Additional Fee For WooCommerce requires', 'woo-cart-additional-fee' ),
 				esc_url( 'https://wordpress.org/plugins/woocommerce/' ),
 				__( 'WooCommerce', 'woo-cart-additional-fee' ),
 				__( 'plugin to be active!', 'woo-cart-additional-fee' ),
