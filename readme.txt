@@ -4,7 +4,7 @@ Contributors: sajjad67
 Author: Sajjad Hossain Sagor
 Tested up to: 6.8
 Requires at least: 5.6
-Stable tag: 2.0.5
+Stable tag: 2.0.6
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -44,6 +44,8 @@ Update inputs according to your requirement and you are good to go.
 2. Additional Fee displayed in cart using Cart Additional Fee For WooCommerce plugin.
 
 == Changelog ==
+= 2.0.6 =
+- added support for wc HPOS
 = 2.0.5 =
 - Changed plugin name for complying with the trademark
 = 2.0.4 =

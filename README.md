@@ -53,6 +53,9 @@ Update inputs according to your requirement and you are good to go.
 
 ## Changelog
 
+### 2.0.6
+- added support for wc HPOS
+
 ### 2.0.5
 - Changed plugin name for complying with the trademark
 

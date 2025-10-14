@@ -126,7 +126,7 @@ class Woo_Cart_Additional_Fee_Admin {
 	 */
 	public function declare_compatibility_with_wc_custom_order_tables() {
 		if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
-			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', WOO_CART_ADDITIONAL_FEE_PLUGIN_BASENAME, true );
 		}
 	}
 
