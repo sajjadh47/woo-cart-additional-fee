@@ -3,7 +3,7 @@
 [![Plugin Banner](https://ps.w.org/woo-cart-additional-fee/assets/banner-772x250.png)](https://wordpress.org/plugins/woo-cart-additional-fee/)
 
 **Tags:** WooCommerce, custom fee, additional fee, cart fee, extra fee, WooCommerce fee, advanced fee \
-**Tested up to:** 6.8 \
+**Tested up to:** 6.9 \
 **Requires PHP:** 8.0
 
 Add Additional Fee to your Customer Cart Based on Some Filters.
@@ -52,6 +52,9 @@ Update inputs according to your requirement and you are good to go.
 ![Additional Fee displayed in cart using Cart Additional Fee For WooCommerce plugin.](https://ps.w.org/woo-cart-additional-fee/assets/screenshot-2.png)
 
 ## Changelog
+
+### 2.0.7
+- Compatibility checkup for latest wp version 6.9
 
 ### 2.0.6
 - added support for wc HPOS
