@@ -1,6 +1,6 @@
 # Cart Additional Fee For WooCommerce
 
-[![Plugin Banner](https://ps.w.org/woo-cart-additional-fee/assets/banner-772x250.png)](https://wordpress.org/plugins/woo-cart-additional-fee/)
+[![Plugin Banner](https://ps.w.org/woo-cart-additional-fee/assets/banner-1544x500.png)](https://wordpress.org/plugins/woo-cart-additional-fee/)
 
 **Tags:** WooCommerce, custom fee, additional fee, cart fee, extra fee, WooCommerce fee, advanced fee \
 **Tested up to:** 6.9 \
